@@ -1,0 +1,435 @@
+mysql> insert into emp
+    -> values(
+    ->  7839, 'KING', 'PRESIDENT', null,
+    ->  '1981-11-17',
+    ->  5000, null, 10
+    -> );
+Query OK, 1 row affected (0.78 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7698, 'BLAKE', 'MANAGER', 7839,
+    ->  '1981-5-1',
+    ->  2850, null, 30
+    -> );
+Query OK, 1 row affected (0.30 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7782, 'CLARK', 'MANAGER', 7839,
+    ->  '1981-6-9',
+    ->  2450, null, 10
+    -> );
+Query OK, 1 row affected (0.57 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7566, 'JONES', 'MANAGER', 7839,
+    ->  '1981-4-2',
+    ->  2975, null, 20
+    -> );
+Query OK, 1 row affected (0.20 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7788, 'SCOTT', 'ANALYST', 7566,
+    ->  '1987-7-13',
+    ->  3000, null, 20
+    -> );
+Query OK, 1 row affected (0.19 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7902, 'FORD', 'ANALYST', 7566,
+    ->  '1981-12-3',
+    ->  3000, null, 20
+    -> );
+Query OK, 1 row affected (0.18 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7369, 'SMITH', 'CLERK', 7902,
+    ->  '1980-12-17',
+    ->  800, null, 20
+    -> );
+Query OK, 1 row affected (0.23 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7499, 'ALLEN', 'SALESMAN', 7698,
+    ->  '1981-2-20',
+    ->  1600, 300, 30
+    -> );
+Query OK, 1 row affected (0.26 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7521, 'WARD', 'SALESMAN', 7698,
+    ->  '1981-2-22',
+    ->  1250, 500, 30
+    -> );
+Query OK, 1 row affected (0.25 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7654, 'MARTIN', 'SALESMAN', 7698,
+    ->  '1981-9-28',
+    ->  1250, 1400, 30
+    -> );
+Query OK, 1 row affected (0.20 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7844, 'TURNER', 'SALESMAN', 7698,
+    ->  '1981-9-8',
+    ->  1500, 0, 30
+    -> );
+Query OK, 1 row affected (0.22 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7876, 'ADAMS', 'CLERK', 7788,
+    ->  '1987-7-13',
+    ->  1100, null, 20
+    -> );
+Query OK, 1 row affected (0.26 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7900, 'JAMES', 'CLERK', 7698,
+    ->  '1981-12-3',
+    ->  950, null, 30
+    -> );
+Query OK, 1 row affected (0.50 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7934, 'MILLER', 'CLERK', 7782,
+    ->  '1982-1-23',
+    ->  1300, null, 10
+    -> );
+Query OK, 1 row affected (0.48 sec)
+
+mysql> SELECT * 
+    -> FROM EMP, DEPT;
++-------+--------+-----------+------+------------+------+------+--------+--------+------------+----------+
+| empno | ename  | job       | mgr  | hiredate   | sal  | comm | deptno | deptno | dname      | loc      |
++-------+--------+-----------+------+------------+------+------+--------+--------+------------+----------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |     40 | OPERATIONS | BOSTON   |
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |     30 | SALES      | CHICAGO  |
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |     10 | ACCOUNTING | NEW YORK |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |     40 | OPERATIONS | BOSTON   |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |     30 | SALES      | CHICAGO  |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |     20 | RESEARCH   | DALLAS   |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |     10 | ACCOUNTING | NEW YORK |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |     40 | OPERATIONS | BOSTON   |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |     30 | SALES      | CHICAGO  |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |     20 | RESEARCH   | DALLAS   |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |     10 | ACCOUNTING | NEW YORK |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |     40 | OPERATIONS | BOSTON   |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |     30 | SALES      | CHICAGO  |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |     10 | ACCOUNTING | NEW YORK |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |     40 | OPERATIONS | BOSTON   |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |     30 | SALES      | CHICAGO  |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |     20 | RESEARCH   | DALLAS   |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |     10 | ACCOUNTING | NEW YORK |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |     40 | OPERATIONS | BOSTON   |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |     30 | SALES      | CHICAGO  |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |     20 | RESEARCH   | DALLAS   |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |     10 | ACCOUNTING | NEW YORK |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |     40 | OPERATIONS | BOSTON   |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |     30 | SALES      | CHICAGO  |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |     20 | RESEARCH   | DALLAS   |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |     10 | ACCOUNTING | NEW YORK |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-07-13 | 3000 | NULL |     20 |     40 | OPERATIONS | BOSTON   |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-07-13 | 3000 | NULL |     20 |     30 | SALES      | CHICAGO  |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-07-13 | 3000 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-07-13 | 3000 | NULL |     20 |     10 | ACCOUNTING | NEW YORK |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |     40 | OPERATIONS | BOSTON   |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |     30 | SALES      | CHICAGO  |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |     20 | RESEARCH   | DALLAS   |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |     10 | ACCOUNTING | NEW YORK |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |     40 | OPERATIONS | BOSTON   |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |     30 | SALES      | CHICAGO  |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |     20 | RESEARCH   | DALLAS   |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |     10 | ACCOUNTING | NEW YORK |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-07-13 | 1100 | NULL |     20 |     40 | OPERATIONS | BOSTON   |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-07-13 | 1100 | NULL |     20 |     30 | SALES      | CHICAGO  |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-07-13 | 1100 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-07-13 | 1100 | NULL |     20 |     10 | ACCOUNTING | NEW YORK |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |     40 | OPERATIONS | BOSTON   |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |     30 | SALES      | CHICAGO  |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |     20 | RESEARCH   | DALLAS   |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |     10 | ACCOUNTING | NEW YORK |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |     40 | OPERATIONS | BOSTON   |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |     30 | SALES      | CHICAGO  |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |     10 | ACCOUNTING | NEW YORK |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |     40 | OPERATIONS | BOSTON   |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |     30 | SALES      | CHICAGO  |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |     20 | RESEARCH   | DALLAS   |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |     10 | ACCOUNTING | NEW YORK |
++-------+--------+-----------+------+------------+------+------+--------+--------+------------+----------+
+56 rows in set (0.06 sec)
+
+mysql> insert into emp
+    -> values(
+    ->  7839, 'KING', 'PRESIDENT', null,
+    ->  '1981-11-17',
+    ->  5000, null, 10
+    -> );
+ERROR 1062 (23000): Duplicate entry '7839' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7698, 'BLAKE', 'MANAGER', 7839,
+    ->  '1981-5-1',
+    ->  2850, null, 30
+    -> );
+ERROR 1062 (23000): Duplicate entry '7698' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7782, 'CLARK', 'MANAGER', 7839,
+    ->  '1981-6-9',
+    ->  2450, null, 10
+    -> );
+ERROR 1062 (23000): Duplicate entry '7782' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7566, 'JONES', 'MANAGER', 7839,
+    ->  '1981-4-2',
+    ->  2975, null, 20
+    -> );
+ERROR 1062 (23000): Duplicate entry '7566' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7788, 'SCOTT', 'ANALYST', 7566,
+    ->  '1987-7-13',
+    ->  3000, null, 20
+    -> );
+ERROR 1062 (23000): Duplicate entry '7788' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7902, 'FORD', 'ANALYST', 7566,
+    ->  '1981-12-3',
+    ->  3000, null, 20
+    -> );
+ERROR 1062 (23000): Duplicate entry '7902' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7369, 'SMITH', 'CLERK', 7902,
+    ->  '1980-12-17',
+    ->  800, null, 20
+    -> );
+ERROR 1062 (23000): Duplicate entry '7369' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7499, 'ALLEN', 'SALESMAN', 7698,
+    ->  '1981-2-20',
+    ->  1600, 300, 30
+    -> );
+ERROR 1062 (23000): Duplicate entry '7499' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7521, 'WARD', 'SALESMAN', 7698,
+    ->  '1981-2-22',
+    ->  1250, 500, 30
+    -> );
+ERROR 1062 (23000): Duplicate entry '7521' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7654, 'MARTIN', 'SALESMAN', 7698,
+    ->  '1981-9-28',
+    ->  1250, 1400, 30
+    -> );
+ERROR 1062 (23000): Duplicate entry '7654' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7844, 'TURNER', 'SALESMAN', 7698,
+    ->  '1981-9-8',
+    ->  1500, 0, 30
+    -> );
+ERROR 1062 (23000): Duplicate entry '7844' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7876, 'ADAMS', 'CLERK', 7788,
+    ->  '1987-7-13',
+    ->  1100, null, 20
+    -> );
+ERROR 1062 (23000): Duplicate entry '7876' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7900, 'JAMES', 'CLERK', 7698,
+    ->  '1981-12-3',
+    ->  950, null, 30
+    -> );
+ERROR 1062 (23000): Duplicate entry '7900' for key 'emp.PRIMARY'
+mysql> insert into emp
+    -> values(
+    ->  7934, 'MILLER', 'CLERK', 7782,
+    ->  '1982-1-23',
+    ->  1300, null, 10
+    -> );
+ERROR 1062 (23000): Duplicate entry '7934' for key 'emp.PRIMARY'
+mysql> 
+mysql> SEELCT *
+    -> FROM EMP INNER JOIN DEPT
+    -> ON EMP.DEPTNO = DEPT.DEPTNO;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SEELCT *
+FROM EMP INNER JOIN DEPT
+ON EMP.DEPTNO = DEPT.DEPTNO' at line 1
+mysql> SEELCT * 
+    -> FROM EMP INNER JOIN DEPT
+    -> ON EMP.DEPTNO = DEPT.DEPTNO;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SEELCT * 
+FROM EMP INNER JOIN DEPT
+ON EMP.DEPTNO = DEPT.DEPTNO' at line 1
+mysql> SELECT * 
+    -> FROM EMP INNER JOIN DEPT
+    -> ON EMP.DEPTNO = DEPT.DEPTNO;
++-------+--------+-----------+------+------------+------+------+--------+--------+------------+----------+
+| empno | ename  | job       | mgr  | hiredate   | sal  | comm | deptno | deptno | dname      | loc      |
++-------+--------+-----------+------+------------+------+------+--------+--------+------------+----------+
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |     10 | ACCOUNTING | NEW YORK |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |     10 | ACCOUNTING | NEW YORK |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |     10 | ACCOUNTING | NEW YORK |
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-07-13 | 3000 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-07-13 | 1100 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |     20 | RESEARCH   | DALLAS   |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |     30 | SALES      | CHICAGO  |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |     30 | SALES      | CHICAGO  |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |     30 | SALES      | CHICAGO  |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |     30 | SALES      | CHICAGO  |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |     30 | SALES      | CHICAGO  |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |     30 | SALES      | CHICAGO  |
++-------+--------+-----------+------+------------+------+------+--------+--------+------------+----------+
+14 rows in set (0.01 sec)
+
+mysql> SELECT * 
+    -> FROM EMP
+    -> ;
++-------+--------+-----------+------+------------+------+------+--------+
+| empno | ename  | job       | mgr  | hiredate   | sal  | comm | deptno |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1987-07-13 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1987-07-13 | 1100 | NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+14 rows in set (0.00 sec)
+
+mysql> SELECT * 
+    -> FROM EMP
+    -> LIMIT 11,3
+    -> ;
++-------+--------+---------+------+------------+------+------+--------+
+| empno | ename  | job     | mgr  | hiredate   | sal  | comm | deptno |
++-------+--------+---------+------+------------+------+------+--------+
+|  7900 | JAMES  | CLERK   | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK   | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+---------+------+------------+------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * 
+    -> ;
+ERROR 1096 (HY000): No tables used
+mysql> SELECT EANME,DNAME
+    -> FROM EMP,DEPT
+    -> WHERE EMP.DEPTNO=DEPT.DEPTNO;
+ERROR 1054 (42S22): Unknown column 'EANME' in 'field list'
+mysql> SELECT ENAME, DNAME
+    -> FROM EMP,DEPT
+    -> WHERE EMP.DEPTNO = DEPT.DEPTNO;
++--------+------------+
+| ENAME  | DNAME      |
++--------+------------+
+| CLARK  | ACCOUNTING |
+| KING   | ACCOUNTING |
+| MILLER | ACCOUNTING |
+| SMITH  | RESEARCH   |
+| JONES  | RESEARCH   |
+| SCOTT  | RESEARCH   |
+| ADAMS  | RESEARCH   |
+| FORD   | RESEARCH   |
+| ALLEN  | SALES      |
+| WARD   | SALES      |
+| MARTIN | SALES      |
+| BLAKE  | SALES      |
+| TURNER | SALES      |
+| JAMES  | SALES      |
++--------+------------+
+14 rows in set (0.00 sec)
+
+mysql> SELECT ENAME,DNAME
+    -> FROM EMP, DEPT
+    -> WHERE EMP.DEPTNO=DEPT.DEPTNO
+    -> AND EMP.DEPTNO=10;
++--------+------------+
+| ENAME  | DNAME      |
++--------+------------+
+| CLARK  | ACCOUNTING |
+| KING   | ACCOUNTING |
+| MILLER | ACCOUNTING |
++--------+------------+
+3 rows in set (0.00 sec)
+
+mysql> DELIMETER &&
+    -> CREATE PROCEDURE GETDATE()
+    -> BEGIN
+    -> SELECT * FROM EMP 
+    -> WHERE SAL>2000
+    -> END &&;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMETER &&
+CREATE PROCEDURE GETDATE()
+BEGIN
+SELECT * FROM EMP 
+WHERE SAL>2000
+' at line 1
+mysql> DELIMETER && 
+    -> CREATE PROCEDURE GETDATA()
+    -> BEGIN 
+    -> SELECT * FROM EMP WHERE SAL > 2000
+    -> END &&;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMETER && 
+CREATE PROCEDURE GETDATA()
+BEGIN 
+SELECT * FROM EMP WHERE SAL > 20' at line 1
+mysql> DELIMETER && 
+    -> create procedure getdata()
+    -> BEGIN 
+    -> SELECT * FROM EMP WHERE SALALRY>2000
+    -> END&&
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMETER && 
+create procedure getdata()
+BEGIN 
+SELECT * FROM EMP WHERE SALALRY>' at line 1
+mysql> DELIMETER &&
+    -> create procedure gatdata()
+    -> BEGIN 
+    -> SELECT * FROM EMP WHERE SAL>2000
+    -> END &&
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DELIMETER &&
+create procedure gatdata()
+BEGIN 
+SELECT * FROM EMP WHERE SAL>2000
+' at line 1
+mysql> ^C
+mysql> ^C
+mysql> ^C
+mysql> exit

@@ -1,0 +1,105 @@
+
+	usevariables and system variables in windows 
+                                      
+	system variable is accesible only to the admin 
+	
+
+	mongo db
+
+
+
+	monolithic -- backend server and client within a single application 
+
+
+	microservieses or rest architefchrue -- separete backend and front end applications
+
+
+
+	NO SQL ==>  
+
+			/* in sql data is strored in the form of tables */
+
+			
+			but in NOsQL there is no tables 
+
+
+			we can store data in the form of files graphs 
+
+
+	for mongo db default port :  27017
+	
+	
+	type "mongo"  in set path of  commnad prompt 
+
+
+
+
+			=> Inplace of tables we have something called Collections 
+
+	==> in collections we have store data in the form   JSON object
+
+	
+			
+	under noSQL there are many databasess
+
+
+			MOngoDB is one of the noSql database Application 
+			which runs in our system where we write the queries 
+
+			C:\Program Files\MongoDB\Server\5.0\data\
+
+
+
+
+
+
+
+
+	database has collections -> has documents -> it has JSON objects
+
+
+	in json 
+
+		keys are similar to column 
+			and
+				 values are similar to rows
+
+
+	TO INSERT DATA WRITE 
+			
+				db.collection_name.insert( json_object )
+
+
+	to get the element 
+
+			db.test.find() -> gives all elements
+
+------------------------------------------------------------------------------------------------------------------=-----------------
+
+	NOTE ; mongo db gives unique id for every object				
+-------------------------------------------------------------------------------------------------------------------------------------	
+				
+
+
+-id has to be unique => note : we change the _id 
+
+but we give same id for 2 different object i.e,,   duplicate id then 
+
+we get an error called : "duplicate key error 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
